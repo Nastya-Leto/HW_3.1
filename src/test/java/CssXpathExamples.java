@@ -1,6 +1,10 @@
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
+
+import com.codeborne.selenide.Condition;
+import org.openqa.selenium.By;
 
 public class CssXpathExamples {
     void cssXpathExamples() {
@@ -36,5 +40,28 @@ public class CssXpathExamples {
         $x("//div[text()='Hello, qa.guru!']").click();
         $(byText("Hello, qa.guru!")).click();
         $(withText("llo, qa.gur")).click();
+
+
+//Gender - пол, радиобаттон
+$("#genterWrapper").$(byText("Male")).click();
+$("#gender-radio-1").sendKeys(" ");
+$(By.cssSelector("label[for='gender-radio-1']")).click();
+$("label[for='gender-radio-1']").click();
+$(byText("Other")).click();
+$x ("//label[text()='Male']").click();
+
+//Subjects - множественный выбор
+$("#subjectsInput").setValue("Arts").pressEnter();
+
+//Hobbies - чекбоксы
+$("#hobbies-checkbox-1").sendKeys(" "); //мое решение
+$("#hobbies-checkbox-3").parent().$(byText("Music")).click();
+$(By.cssSelector("label[for='hobbies-checkbox-1']")).click();
+$("label[for='hobbies-checkbox-1']").click();
+$("label[for='hobbies-checkbox-1']").shouldHave(text("Sport")).click();
+$("#hobbies-checkbox-1").sendKeys(" ");
+$("#hobbiesWrapper").$(byText("Music")).click();;
+$("#hobbies-checkbox-2").parent().$(byText("Reading")).click();
+$(byText("Sports")).click();
     }
-}
+    }

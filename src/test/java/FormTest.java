@@ -24,7 +24,7 @@ public class FormTest {
         $("[id=firstName]").setValue("Z");
         $("[id=lastName]").setValue("Anastasiya");
         $("[id=userEmail]").setValue("stasia-oops@yandex.ru");
-        $("#gender-radio-1").sendKeys(" ");
+        $("#genterWrapper").$(byText("Female")).click();
         $("[id=userNumber]").setValue("8927111111");
 
         $(".react-datepicker-wrapper").click();
@@ -33,7 +33,7 @@ public class FormTest {
         $(".react-datepicker__day.react-datepicker__day--027").click();
 
         $("#subjectsInput").setValue("Arts").pressEnter();
-        $("#hobbies-checkbox-1").sendKeys(" ");
+        $("#hobbiesWrapper").$(byText("Music")).click();;
         $("#uploadPicture").uploadFromClasspath("pictures/img1.png");
         $("[id=currentAddress]").setValue("SamaraSamaraSamaraSamaraSamaraSamaraSamara");
         $("#state").click();
@@ -46,11 +46,11 @@ public class FormTest {
         $(".table-responsive").shouldHave(
                 text("Z Anastasiya"),
                 text("stasia-oops@yandex.ru"),
-                text("Male"),
+                text("Female"),
                 text("8927111111"),
                 text("27 May,1991"),
                 text("Arts"),
-                text("Sports"),
+                text("Music"),
                 text("img1.png"),
                 text("SamaraSamaraSamaraSamaraSamaraSamaraSamara"),
                 text("NCR Noida"));
