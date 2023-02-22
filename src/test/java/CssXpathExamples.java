@@ -63,5 +63,22 @@ $("#hobbies-checkbox-1").sendKeys(" ");
 $("#hobbiesWrapper").$(byText("Music")).click();;
 $("#hobbies-checkbox-2").parent().$(byText("Reading")).click();
 $(byText("Sports")).click();
+
+//добавление картинки
+$("#uploadPicture").uploadFromClasspath("pictures/3.png");
+//$("#uploadPicture").uploadFile(fileToUpload);
+//File img = new File("src/test/resources/images/img.jpg");
+//$("#uploadPicture").uploadFile(file);
+//File fileToUpload = new File("src/test/resources/data/wipdaf.PNG");
+// $x("//input[@id='uploadPicture']").uploadFile(file);
+// $("#uploadPicture").uploadFile(new File("src/test/resources/Pic.png"));
+//$("input.form-control-file").uploadFile(new File("src/test/resources/photo_2022-12-06_17-04-37.jpg"));
+
+//адрес
+$("[id=currentAddress]").setValue("SamaraSamaraSamaraSamaraSamaraSamaraSamara"); //мое решение
+$("#currentAddress").sendKeys("internet");
+//$x("//textarea[@placeholder='Current Address']").setValue(currentAddress);
+//$x("//*[@placeholder='Current Address']").setValue(address);
+
     }
     }
