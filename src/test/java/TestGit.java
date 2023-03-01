@@ -4,6 +4,10 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
+
+import java.awt.*;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
